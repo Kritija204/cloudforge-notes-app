@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CloudForge Notes is a tiny notes app built to test container deployment.">
+  <title>CloudForge Notes</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <a class="logo" href="/"><span class="logo-mark">N</span><span>CloudForge <b>Notes</b></span></a>
+      <span class="pill"><i></i> App online</span>
+    </header>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">A DEPLOYMENT TEST APP</p>
+        <h1>Your thoughts,<br><span>in one place.</span></h1>
+        <p class="lead">A lightweight notes app with a real backend, health endpoint, and Docker support. Add a note and see it appear instantly.</p>
+        <div class="facts"><span>● Flask API</span><span>● Docker-ready</span><span>● Health check</span></div>
+      </div>
+      <section class="panel">
+        <div class="panel-heading"><div><span class="panel-icon">✦</span><div><h2>Quick note</h2><p>Capture an idea before it disappears.</p></div></div><span class="counter" id="count">0 / 50</span></div>
+        <form id="noteForm">
+          <label for="title">Title</label>
+          <input id="title" name="title" maxlength="100" placeholder="e.g. Things to build next" required>
+          <label for="content">Your note</label>
+          <textarea id="content" name="content" maxlength="2000" rows="4" placeholder="Write something worth remembering..." required></textarea>
+          <button class="submit" type="submit"><span>Save note</span><span>↗</span></button>
+          <p id="message" class="message" role="status"></p>
+        </form>
+      </section>
+    </section>
+    <section class="notes-section">
+      <div class="section-title"><div><p class="eyebrow">YOUR SPACE</p><h2>Recent notes</h2></div><button id="refresh" class="refresh" type="button">↻ Refresh</button></div>
+      <div id="notes" class="notes-grid"><div class="empty">Loading notes…</div></div>
+    </section>
+    <footer><span>CloudForge Notes · Demo app</span><a href="/health" target="_blank" rel="noreferrer">Check app health ↗</a></footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
